@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archivos y Mediciones</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="#"><i class="fas fa-file-alt"></i> Archivos y Mediciones</a>
+      </div>
+      <ul>
+        <li><a href="#" id="showArchivos" class="active">Archivos</a></li>
+        <li><a href="#" id="showMediciones">Mediciones</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="archivosSection">
+      <div class="container">
+        <h2>Archivos</h2>
+        <form id="archivoForm">
+          <div class="form-group">
+            <label for="metodologia">Metodología:</label>
+            <select id="metodologia" name="metodologia" required>
+              <option value="">Selecciona una metodología</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="subdivision">Subdivisión:</label>
+            <input type="number" id="subdivision" name="subdivision" required>
+          </div>
+          <div class="form-group">
+            <label for="nombre">Nombre del archivo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+        <table id="archivoTable">
+          <thead>
+            <tr>
+              <th>Metodología</th>
+              <th>Subdivisión</th>
+              <th>Nombre</th>
+              <th>Fecha</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="medicionesSection" class="hidden">
+      <div class="container">
+        <h2>Mediciones</h2>
+        <form id="medicionForm">
+          <div class="form-group">
+            <label for="metodologiaMedicion">Metodología:</label>
+            <select id="metodologiaMedicion" name="metodologiaMedicion" required>
+              <option value="">Selecciona una metodología</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="numMedidas">Número de medidas:</label>
+            <input type="number" id="numMedidas" name="numMedidas" required>
+          </div>
+          <div class="form-group">
+            <label for="error">Error:</label>
+            <select id="error" name="error" required>
+              <option value="">Selecciona un error</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+        <table id="medicionTable">
+          <thead>
+            <tr>
+              <th>Metodología</th>
+              <th>Número de medidas</th>
+              <th>Error</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
